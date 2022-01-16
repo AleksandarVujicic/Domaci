@@ -10,6 +10,7 @@ public class FacebookPost {
 	
 	public FacebookPost() {}
 	public FacebookPost(String imeKorisnika1, String imeKorisnika2, String tekstObjave) {
+		
 		this.imeKorisnika1 = imeKorisnika1;
 		this.imeKorisnika2=imeKorisnika2;
 		this.tekstObjave=tekstObjave;
@@ -44,8 +45,13 @@ public class FacebookPost {
 		return this.brojLajkova;
 	}
 	public int Disajk() {
-		this.brojLajkova--;
-		return this.brojLajkova;
+		
+		if (this.brojLajkova>0) {
+			this.brojLajkova--;	
+			return this.brojLajkova;}
+		else {
+			return 0;
+		}
 }
 	public int Share () {
 		this.brojDeljenja++;
