@@ -48,7 +48,10 @@ public class Transakcija {
 	}
 	public void izvrsiTransakciju(double prenesenaSredstva) {
 		this.posiljalac.smanjiStanje(prenesenaSredstva + Provizija(prenesenaSredstva));
+		if (this.posiljalac.getStanje() > prenesenaSredstva) {
 		this.primalac.povecajStanje(prenesenaSredstva);
+		}
+	
 	}
 	public void Print() {
 		System.out.println("ID transakcije: " + this.idTransakcija);

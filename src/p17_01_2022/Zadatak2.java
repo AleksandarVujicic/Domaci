@@ -9,7 +9,7 @@ public class Zadatak2 {
 		
 		Transakcija transakcija = new Transakcija("54214", posiljalac, primalac);
 		
-		transakcija.izvrsiTransakciju(2);
+		transakcija.izvrsiTransakciju(500);
 		transakcija.Print();
 	}
 
